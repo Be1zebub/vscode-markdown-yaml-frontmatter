@@ -21,6 +21,13 @@ ut:
 ---
 ```
 
+## Install
+
+No marketplace planned, install from VSIX.
+
+![install example](docs/install.png)  
+[download](markdown-yaml-frontmatter-0.1.0.vsix) or build yourself via `npx vsce package`
+
 ## Extras
 
 - **#yaml-v** marker for vertical layout.
