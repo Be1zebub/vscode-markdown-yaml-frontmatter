@@ -6,7 +6,7 @@ module.exports = /** @type WebpackConfig */ {
     mode: 'none', // this leaves the source code as close as possible to the original (when packaging we set this to 'production')
     target: 'webworker', // extensions run in a webworker context
     entry: {
-        'index': './src/index.ts', // source of the web extension main file
+        'index': './src/index.js', // source of the web extension main file
     },
     output: {
         filename: '[name].js',
@@ -15,19 +15,10 @@ module.exports = /** @type WebpackConfig */ {
     },
     resolve: {
         mainFields: ['browser', 'module', 'main'], // look for `browser` entry point in imported node modules
-        extensions: ['.ts', '.js'], // support ts-files and js-files
+        extensions: ['.js'], // support js-files
         fallback: {
             "buffer": require.resolve("buffer/")
         }
-    },
-    module: {
-        rules: [{
-            test: /\.ts$/,
-            exclude: /node_modules/,
-            use: [{
-                loader: 'ts-loader'
-            }]
-        }]
     },
     externals: {
         'vscode': 'commonjs vscode', // ignored because it doesn't exist

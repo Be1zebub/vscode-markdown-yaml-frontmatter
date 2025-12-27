@@ -1,8 +1,29 @@
-[![](https://vsmarketplacebadge.apphb.com/version/bierner.markdown-yaml-preamble.svg)](https://marketplace.visualstudio.com/items?itemName=bierner.markdown-yaml-premable)
+# VSCode markdown yaml frontmatter
 
 Makes yaml front matter render as a table in VS Code's built-in markdown preview:
 
-![](https://raw.githubusercontent.com/mjbvz/vscode-markdown-yaml-preamble/master/docs/example.png)
+![render example](docs/render.png)
 
-# Features 
-- Adds support for rendering yaml front matter as a table in VS Code's built-in markdown preview.
+## Syntax
+
+![vertical syntax](docs/vertical.png)
+
+```markdown
+---
+#yaml
+lorem: ipsum dolor sit amet
+sed: do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+ut:
+  - enim ad minim
+  - quis nostrud
+  - exercitation ullamco
+  - ex ea
+---
+```
+
+## Extras
+
+- **#yaml-v** marker for vertical layout.
+- custom markers & allow anywhere (so its not just a preamble, in any place table rendering also)
+- backward compatibilitie with github yaml frontmatter rendering (it just ignore comments)
+- highly configurable
